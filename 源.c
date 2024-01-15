@@ -1,5 +1,5 @@
 #define _CRT_SECURE_NO_WARNINGS
-//¶ş²æËÑË÷Ê÷
+//äºŒå‰æœç´¢æ ‘
 #include<stdio.h>
 #include<stdlib.h>
 #include<stdbool.h>
@@ -70,7 +70,7 @@ int FindHeight(BstNode* root) {
 	}
 	return max(FindHeight(root->left), FindHeight(root->right)) + 1;
 }
-BstNode* findMin(BstNode* root)//ÓÃÓÚDeleteº¯Êı
+BstNode* findMin(BstNode* root)//ç”¨äºDeleteå‡½æ•°
 {
 	while (root->left != NULL) {
 		root = root->left;
@@ -138,7 +138,7 @@ int main() {
 }
 
 
-//Ê÷µÄ±éÀú
+//æ ‘çš„éå†
 /*
 #include<stdio.h>
 #include<stdlib.h>
@@ -147,7 +147,7 @@ typedef struct node{
 	struct node* left;
 	struct node* right;
 }node;
-//¶ÓÁĞ
+//é˜Ÿåˆ—
 typedef struct queue {
 	node* root;
 	struct queue* next;
@@ -181,7 +181,7 @@ void DeQueue(){
 	}
 	free(temp);
 }
-//Ê÷µÄ²ã´Î±éÀú
+//æ ‘çš„å±‚æ¬¡éå†
 void LevelOrder(node* root) {
 	if (root == NULL) {
 		return;
@@ -223,7 +223,7 @@ int main() {
 }
 */
 /*
-//Èı´ó±éÀú
+//ä¸‰å¤§éå†
 #include<stdio.h>
 #include<stdlib.h>
 typedef struct Node {
@@ -249,7 +249,7 @@ void Insert(Node** root, int k) {
 		Insert(&((*root)->left), k);
 	}
 }
-//Ç°Ğò±éÀú
+//å‰åºéå†
 void Preorder(Node* root) {
 	if (root == NULL) {
 		return;
@@ -258,7 +258,7 @@ void Preorder(Node* root) {
 	Preorder(root->left);
 	Preorder(root->right);
 }
-//ÖĞĞò±éÀú
+//ä¸­åºéå†
 void Inorder(Node* root) {
 	if (root == NULL) {
 		return;
@@ -267,7 +267,7 @@ void Inorder(Node* root) {
 	printf("%c", root->data);
 	Inorder(root->right);
 }
-//ºóĞò±éÀú
+//ååºéå†
 void Postorder(Node* root) {
 	if (root == NULL) {
 		return;
@@ -279,7 +279,7 @@ void Postorder(Node* root) {
 int main() {
 	/*Code To Test the logic
 	  Creating an example tree
-				M
+			    M
 			   / \
 			  B   Q
 			 / \   \
